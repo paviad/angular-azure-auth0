@@ -32,7 +32,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.login$ = this.auth.login$;
-    // this.auth.login$.subscribe(r => r && r.email && this.store.dispatch(new AppStore.IsScheduledUpdateEnabled()));
     this.auth.broadcastLogin();
     this.loading$ = this.router.events.pipe(
       filter(r => r instanceof NavigationStart || r instanceof NavigationEnd || r instanceof NavigationCancel),

@@ -17,6 +17,5 @@ export const reducers: ActionReducerMap<AppState> = {
   search: AppReducers.SearchReducer
 };
 
-// export const selectSearchState = (state: AppState) => state.search;
 export const selectSearchState = createFeatureSelector<AppReducers.SearchState>('search');
 export const selectRouterState = createFeatureSelector<fromRouter.RouterReducerState<RouterReducers.RouterStateUrl>>('routerReducer');

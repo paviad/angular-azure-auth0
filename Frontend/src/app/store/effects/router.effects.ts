@@ -16,9 +16,4 @@ export class RouterEffects {
     private action$: Actions,
     private backend: BackendService,
   ) { }
-
-  // @Effect()
-  // clearData$ = this.action$.ofType<RouterNavigationAction>(ROUTER_NAVIGATION).pipe(
-  //   map(r => new AppActions.ClearDataAction())
-  // );
 }

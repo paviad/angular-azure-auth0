@@ -88,11 +88,6 @@ function clearAjaxError(action: Action, newState: SearchState, state: SearchStat
       };
     }
     newState.error = null;
-    // newState.ajaxInProgress--;
-    // const errAction = xaction as AjaxErrorAction;
-    // if (errAction.cancelOnNavAction) {
-    //   newState.ajaxInProgressCancelOnNav--;
-    // }
   }
   return newState;
 }
