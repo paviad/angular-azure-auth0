@@ -95,10 +95,10 @@ const matModules = [
       useClass: TokenInterceptor,
       multi: true
     },
-    { provide: LOCALE_ID, useValue: 'he-IL' },
-    { provide: CurrencyPipe, useClass: MyCurrencyPipe },
+    // { provide: LOCALE_ID, useValue: 'he-IL' },
+    // { provide: CurrencyPipe, useClass: MyCurrencyPipe },
     { provide: RouterStateSerializer, useClass: AppStore.CustomSerializer },
-    { provide: MAT_DATE_LOCALE, useValue: 'en-GB' },
+    // { provide: MAT_DATE_LOCALE, useValue: 'en-GB' },
   ],
   bootstrap: [AppComponent]
 })

@@ -6,9 +6,10 @@ This is a template for a web site application which includes:
 
 1. An angular (^5.2.8) application as front end
 2. Redux architecture using `@ngrx/store` and its related libraries
-3. An ASP.NET Web API application as back end
-4. Authentication using Auth0.com (https://auth0.com)
-5. Build definitions for VisualStudio online (https://www.visualstudio.com)
+3. Angular Material (^5.2.4)
+4. An ASP.NET Web API application as back end
+5. Authentication using Auth0.com (https://auth0.com)
+6. Build definitions for VisualStudio online (https://www.visualstudio.com)
 
 ## How to configure?
 
