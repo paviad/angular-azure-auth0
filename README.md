@@ -12,7 +12,7 @@ This is a template for a web site application which includes:
 6. Build definitions for VisualStudio online (https://www.visualstudio.com)
 7. Hangfire scheduled task manager support (https://www.hangfire.io/)
 
-It fully supports local development using VS2017 - checkout Local Development below.
+It fully supports local development using VS2017 - checkout [Local Development](#headin) below.
 
 ## How to configure?
 
@@ -68,7 +68,7 @@ Next, get the git url (either http:// or git:// as you prefer) and define a git 
 
 *Note:* You also need to define an agent or use a hosted one, this is beyond the scope of this readme file.
 
-## Local Development
+## Local Development<a name="headin"></a>
 
 Open a command prompt, navigate to the `\Frontend` folder and type `npm start`, then open VS2017 and open the solution file `Backend.sln` - run that project.
 
