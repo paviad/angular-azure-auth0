@@ -26,8 +26,8 @@ An Azure Web App is required, with the following virtual applications and direct
 |Virtual|Path           |Application|
 |-------|-----------------------|-----------|
 |/      |site\wwwroot           | Yes       |
-|/      |site\wwwroot\apinetbase| Yes       |
-|/      |site\wwwroot\dist      | Yes       |
+|/apinet|site\wwwroot\apinetbase| Yes       |
+|/dist  |site\wwwroot\dist      | Yes       |
 
 (Example Azure Portal Screenshot:)
 
