@@ -10,6 +10,9 @@ This is a template for a web site application which includes:
 4. An ASP.NET Web API application as back end
 5. Authentication using Auth0.com (https://auth0.com)
 6. Build definitions for VisualStudio online (https://www.visualstudio.com)
+7. Hangfire scheduled task manager support (https://www.hangfire.io/)
+
+It fully supports local development using VS2017 - checkout Local Development below.
 
 ## How to configure?
 
@@ -64,3 +67,13 @@ Once these are imported, edit them in turn, and configure the "Tasks" and the "T
 Next, get the git url (either http:// or git:// as you prefer) and define a git remote in your repository, and then you can push into this remote and have visual studio online build and deploy it to azure automatically.
 
 *Note:* You also need to define an agent or use a hosted one, this is beyond the scope of this readme file.
+
+## Local Development
+
+Open a command prompt, navigate to the `\Frontend` folder and type `npm start`, then open VS2017 and open the solution file `Backend.sln` - run that project.
+
+Then you may navigate to `http://localhost:4200` and use the application locally.
+
+If you want to use an SQL database, create a new SQL database file through VS2017 by choosing "Add New Item..." into the project and selecting "SQL Server Database". Leave the name as `Database1.mdf`.
+
+If you don't want to use an SQL database, or if you don't want to use `Hangfire` you need to comment some lines in `\Backend\Startup.cs` (they are clearly marked).

@@ -30,10 +30,12 @@ namespace Backend
                 },
             });
 
-            Hangfire.GlobalConfiguration.Configuration.UseSqlServerStorage("DefaultConnection", new Hangfire.SqlServer.SqlServerStorageOptions {
-                SchemaName = "MyAppHangfire"
-            });
+            // Hangfire.GlobalConfiguration.Configuration.UseSqlServerStorage("DefaultConnection", new Hangfire.SqlServer.SqlServerStorageOptions {
+            //     SchemaName = "MyAppHangfire"
+            // });
 
+            // Comment these two lines if you don't want to use Hangfire 
+            // (also remove the line `using Hangfire` at the top of this file)
             app.UseHangfireDashboard();
             app.UseHangfireServer();
         }
