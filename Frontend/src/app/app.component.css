@@ -1,0 +1,15 @@
+div.error {
+    position: absolute;
+    right: 40px;
+    top: 100px;
+    height: 0;
+    color: red;
+}
+
+.global-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}

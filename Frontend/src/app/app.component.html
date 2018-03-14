@@ -1,0 +1,32 @@
+<mat-progress-bar class="global-loading" [style.visibility]="(ajaxInProgress$ | async) ? 'visible' : 'hidden'" mode="indeterminate" color="warn"></mat-progress-bar>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a routerLink="/">Sales Opportunities</a>
+    <span class="fill-space"></span>
+    <ng-template #loggedOutTpl>
+      <button mat-button (click)="doLogin()">Login</button>
+    </ng-template>
+    <button mat-button *ngIf="(login$ | async)?.email as user; else loggedOutTpl" (click)="doLogout()">
+      Logout {{user}}
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div [style.display]="'flex'" class="sidemenu">
+  <div [style.flex-basis]="'10%'" [style.margin-right.px]="60">
+    <h1>Operations</h1>
+    <mat-list role="list" *ngIf="(login$ | async)?.roles.admin">
+      <mat-list-item role="listitem">
+        <a mat-raised-button routerLink="/home">Home</a>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <a mat-raised-button routerLink="/other">Other</a>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div [style.flex]="'1 1 auto'">
+    <div>
+      <div class="error" *ngIf="error$ | async as error">{{error.statusText}}</div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
