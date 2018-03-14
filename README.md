@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This is a template for a setup which include:
+This is a template for a web site application which includes:
 
 1. An angular (^5.2.8) application as front end
 2. Redux architecture using `@ngrx/store` and its related libraries
