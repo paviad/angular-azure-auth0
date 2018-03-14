@@ -18,10 +18,11 @@ It fully supports local development using VS2017 - checkout [Local Development](
 
 There are several things which need to be done in order for this application to work in your environment:
 
-1. Set up Azure
-2. Set up Auth0
-3. Set up Visual Studio online for continuous build
+1. [Set up Azure](#azure)
+2. [Set up Auth0](#auth0)
+3. [Set up Visual Studio online for continuous build](#vsts)
 
+<a name="azure"></a>
 ### Setting up Azure
 
 An Azure Web App is required, with the following virtual applications and directories definitions:
@@ -32,6 +33,7 @@ An Azure Web App is required, with the following virtual applications and direct
 |/api   |site\wwwroot\apibase   | Yes       |
 |/dist  |site\wwwroot\dist      | Yes       |
 
+<a name="auth0"></a>
 ### Setting up Auth0
 
 Go to https://auth0.com register or sign in, and then create these two entities in Auth0:
@@ -52,6 +54,7 @@ Under "APIs" click "+ CREATE API" fill in a name (whatever you want), and an "Id
 
 Copy this identifier into `\Frontend\src\app\services\auth.service.ts` into the `audience` field of the `auth0` object, and into `\Backend\Startup.cs` into the `audience` variable.
 
+<a name="vsts"></a>
 ### Setting up Visual Studio online
 
 Go to https://www.visualstudio.com register or sign in, create a project and then proceed.
@@ -68,7 +71,8 @@ Next, get the git url (either http:// or git:// as you prefer) and define a git 
 
 *Note:* You also need to define an agent or use a hosted one, this is beyond the scope of this readme file.
 
-## Local Development<a name="headin"></a>
+<a name="headin"></a>
+## Local Development
 
 Open a command prompt, navigate to the `\Frontend` folder and type `npm start`, then open VS2017 and open the solution file `Backend.sln` - run that project.
 
