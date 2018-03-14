@@ -26,12 +26,8 @@ An Azure Web App is required, with the following virtual applications and direct
 |Virtual|Path           |Application|
 |-------|-----------------------|-----------|
 |/      |site\wwwroot           | Yes       |
-|/apinet|site\wwwroot\apinetbase| Yes       |
+|/api   |site\wwwroot\apibase   | Yes       |
 |/dist  |site\wwwroot\dist      | Yes       |
-
-(Example Azure Portal Screenshot:)
-
-![dfg](https://image.ibb.co/jRUCPc/image.png)
 
 ### Setting up Auth0
 
